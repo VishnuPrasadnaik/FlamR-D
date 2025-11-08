@@ -1,3 +1,4 @@
+# Solution for R&D Assignment
 The parametric curve equation with the extracted variables substituted is:
 
 $$
