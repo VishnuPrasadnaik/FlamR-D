@@ -30,7 +30,7 @@ Analyzed the parametric curve equations and identified the unknowns ($\theta, M,
 
 Inspected the provided CSV of $(x, y)$ points for $t$ in $[6, 60]$.
 
-Applied variable ranges according to assignment ($\theta$: $0$-$50^\circ$, $M$: $-0.05$-$0.05$, $X$: $0$-$100$).
+Applied variable ranges according to assignment ($\theta$: $0-50^\circ$, $M: -0.05-0.05$, $X: 0-100$).
 
 #### Model Formulation
 
