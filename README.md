@@ -28,7 +28,7 @@ The output of the code is as follows: <img width="361" height="51" alt="image" s
 
 Analyzed the parametric curve equations and identified the unknowns ($\theta, M, X$).
 
-Inspected the provided CSV of $(x, y)$ points for $t$ in [$6$, $60$].
+Inspected the provided CSV of $(x, y)$ points for $t$ in $[6, 60]$.
 
 Applied variable ranges according to assignment ($\theta$: $0$-$50^\circ$, $M$: $-0.05$-$0.05$, $X$: $0$-$100$).
 
