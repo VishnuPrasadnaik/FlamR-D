@@ -3,14 +3,16 @@
 The parametric curve equation with the extracted variables substituted is:
 
 
-( t*cos(0.491) - exp(0.0214*abs(t))*sin(0.3*t)*sin(0.491) + 54.90,  42 + t*sin(0.491) + exp(0.0214*abs(t))*sin(0.3*t)*cos(0.491) )
+(t * cos(0.491) - exp(0.0214 * |t|) * sin(0.3 * t) * sin(0.491) + 54.90,
+ 42 + t * sin(0.491) + exp(0.0214 * |t|) * sin(0.3 * t) * cos(0.491) )
+
 
 where t is in the range 6 < t < 60, 0.491 radians ≈ 28.12 degrees (the value of θ), M = 0.0214, X = 54.90.
 
 The Code is provided in the Flam.ipynb file of this repository.
 
 The output of the code is as follows:
-//
+\\
 <img width="361" height="51" alt="image" src="https://github.com/user-attachments/assets/3547772f-f060-4fa1-9ee8-ab8f0fe8c1e9" />
 
 "Mean L1 distance for the curve fitting: 25.24".
