@@ -11,6 +11,7 @@ t \cos(0.491)
 \right)
 $$
 
+where $t$ is in the range $6 < t < 60$, $0.491$ radians $\approx 28.12$ degrees (the value of $\theta$), $M = 0.0214$, $X = 54.90$.
 
 where 
 t is in the range 6 < t < 60
