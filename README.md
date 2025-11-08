@@ -11,8 +11,7 @@ where t is in the range 6 < t < 60, 0.491 radians ≈ 28.12 degrees (the value o
 
 The Code is provided in the Flam.ipynb file of this repository.
 
-The output of the code is as follows:
-\\
+The output of the code is as follows:<br>
 <img width="361" height="51" alt="image" src="https://github.com/user-attachments/assets/3547772f-f060-4fa1-9ee8-ab8f0fe8c1e9" />
 
 "Mean L1 distance for the curve fitting: 25.24".
@@ -34,15 +33,23 @@ Converted θ from degrees to radians.
 
 Implemented the parametric model in Python using the xy_data.csv provided in the assignment:
 
-x(t) = t cos(θ) - e^{M |t|} sin(0.3 t) sin(θ)
+$$
+x(t) = t \cos(\theta) - e^{M |t|} \sin(0.3 t) \sin(\theta) + X
+$$
 
-y(t) = 42 + t sin(θ) + e^{M |t|} sin(0.3 t) cos(θ)
+$$
+y(t) = 42 + t \sin(\theta) + e^{M |t|} \sin(0.3t) \cos(\theta)
+$$
+
 
 #### 3. Loss Function Construction
 
 Used mean L1 distance for fitting:
 
-L1 loss = (1/N) Σ_{i=1}^N ( | x_i^{true} - x_i^{model} | + | y_i^{true} - y_i^{model} | )
+$$
+\text{L1 loss} = \frac{1}{N} \sum_{i=1}^N \left( \left| x_i^{\text{true}} - x_i^{\text{model}} \right| + \left| y_i^{\text{true}} - y_i^{\text{model}} \right| \right)
+$$
+
 
 This loss matches the assignment's scoring criterion.
 
