@@ -1,21 +1,12 @@
 # Solution for R&D Assignment
+
 The parametric curve equation with the extracted variables substituted is:
 
-$$
-\left(
-  t \cos(0.491)
-  - e^{0.0214 |t|} \sin(0.3 t) \sin(0.491)
-  + 54.90, \\
-  42 + t \sin(0.491)
-  + e^{0.0214 |t|} \sin(0.3 t) \cos(0.491)
-\right)
-$$
+Plain-text version (works everywhere):
 
+( t*cos(0.491) - exp(0.0214*abs(t))*sin(0.3*t)*sin(0.491) + 54.90,  42 + t*sin(0.491) + exp(0.0214*abs(t))*sin(0.3*t)*cos(0.491) )
 
-
-where $t$ is in the range $6 < t < 60$, $0.491$ radians $\approx 28.12$ degrees (the value of $\theta$), $M = 0.0214$, $X = 54.90$.
-
-
+where t is in the range 6 < t < 60, 0.491 radians ≈ 28.12 degrees (the value of θ), M = 0.0214, X = 54.90.
 
 The Code is provided in the Flam.ipynb file of this repository.
 
@@ -28,33 +19,27 @@ The output of the code is as follows: <img width="361" height="51" alt="image" s
 ### Steps Followed for Parameter Estimation
 #### Understanding the Problem and Data
 
-Analyzed the parametric curve equations and identified the unknowns ($\theta, M, X$).
+Analyzed the parametric curve equations and identified the unknowns (θ, M, X).
 
-Inspected the provided CSV of $(x, y)$ points for $t$ in $[6, 60]$.
+Inspected the provided CSV of (x, y) points for t in [6, 60].
 
-Applied variable ranges according to assignment ($\theta$: $0-50^\circ$, $M: -0.05-0.05$, $X: 0-100$).
+Applied variable ranges according to assignment (θ: 0-50°, M: -0.05-0.05, X: 0-100).
 
 #### Model Formulation
 
-Converted $\theta$ from degrees to radians.
+Converted θ from degrees to radians.
 
-Implemented the parametric model in Python using the xy_data.csv provided in the asssignment:
+Implemented the parametric model in Python using the xy_data.csv provided in the assignment:
 
-$$
-x(t) = t \cos(\theta) - e^{M |t|} \sin(0.3 t) \sin(\theta) + X
-$$
+x(t) = t cos(θ) - e^{M |t|} sin(0.3 t) sin(θ)
 
-$$
-y(t) = 42 + t \sin(\theta) + e^{M |t|} \sin(0.3 t) \cos(\theta)
-$$
+y(t) = 42 + t sin(θ) + e^{M |t|} sin(0.3 t) cos(θ)
 
 #### Loss Function Construction
 
 Used mean L1 distance for fitting:
 
-$$
-\text{L1 loss} = \frac{1}{N} \sum_{i=1}^N \left( \left| x_i^{\text{true}} - x_i^{\text{model}} \right| + \left| y_i^{\text{true}} - y_i^{\text{model}} \right| \right)
-$$
+L1 loss = (1/N) Σ_{i=1}^N ( | x_i^{true} - x_i^{model} | + | y_i^{true} - y_i^{model} | )
 
 This loss matches the assignment's scoring criterion.
 
@@ -64,11 +49,10 @@ Applied scipy.optimize.minimize with method "L-BFGS-B".
 
 Set parameter bounds and initial guesses.
 
-Minimized the L1 loss to extract optimal values for $\theta, M, X$.
+Minimized the L1 loss to extract optimal values for θ, M, X.
 
 #### Result Extraction and Validation
 
 Recorded extracted parameter values and the final mean L1 loss.
 
 Substituted results into the parametric equation for submission.
-
