@@ -3,21 +3,18 @@ The parametric curve equation with the extracted variables substituted is:
 
 $$
 \left(
-t \cos(0.491)
-- e^{0.0214 |t|} \sin(0.3 t) \sin(0.491)
-+ 54.90,\quad
-42 + t \sin(0.491)
-+ e^{0.0214 |t|} \sin(0.3 t) \cos(0.491)
+  t \cos(0.491)
+  - e^{0.0214 |t|} \sin(0.3 t) \sin(0.491)
+  + 54.90,\quad
+  42 + t \sin(0.491)
+  + e^{0.0214 |t|} \sin(0.3 t) \cos(0.491)
 \right)
 $$
 
+
 where $t$ is in the range $6 < t < 60$, $0.491$ radians $\approx 28.12$ degrees (the value of $\theta$), $M = 0.0214$, $X = 54.90$.
 
-where 
-t is in the range 6 < t < 60
-0.491 radians ≈ 28.12 degrees (the value of θ)
-M = 0.0214
-X = 54.90
+
 
 The Code is provided in the Flam.ipynb file of this repository.
 
