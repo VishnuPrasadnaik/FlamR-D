@@ -1,5 +1,5 @@
 The parametric curve equation with the extracted variables substituted is:
-\[
+$$
 \left(
 \ t \cos(0.491)
 \ -\ e^{0.0214 |t|}\ \sin(0.3t)\sin(0.491)
@@ -7,7 +7,8 @@ The parametric curve equation with the extracted variables substituted is:
 42\ +\ t \sin(0.491)
 \ +\ e^{0.0214 |t|}\ \sin(0.3t)\cos(0.491)
 \ \right)
-\]
+$$
+
 where 
 t is in the range 6 < t < 60
 0.491 radians ≈ 28.12 degrees (the value of θ)
@@ -20,10 +21,10 @@ The output of the code is as follows: <img width="361" height="51" alt="image" s
 
 "Mean L1 distance for the curve fitting: 25.24".
 
-##Methodology:
+## Methodology:
 
-###Steps Followed for Parameter Estimation
-####Understanding the Problem and Data
+### Steps Followed for Parameter Estimation
+#### Understanding the Problem and Data
 
 Analyzed the parametric curve equations and identified the unknowns ($\theta, M, X$).
 
@@ -31,7 +32,7 @@ Inspected the provided CSV of $(x, y)$ points for $t$ in [$6$, $60$].
 
 Applied variable ranges according to assignment ($\theta$: $0$-$50^\circ$, $M$: $-0.05$-$0.05$, $X$: $0$-$100$).
 
-####Model Formulation
+#### Model Formulation
 
 Converted $\theta$ from degrees to radians.
 
@@ -45,7 +46,7 @@ $$
 y(t) = 42 + t \sin(\theta) + e^{M |t|} \sin(0.3 t) \cos(\theta)
 $$
 
-####Loss Function Construction
+#### Loss Function Construction
 
 Used mean L1 distance for fitting:
 
@@ -55,7 +56,7 @@ $$
 
 This loss matches the assignment's scoring criterion.
 
-####Optimization
+#### Optimization
 
 Applied scipy.optimize.minimize with method "L-BFGS-B".
 
@@ -63,7 +64,7 @@ Set parameter bounds and initial guesses.
 
 Minimized the L1 loss to extract optimal values for $\theta, M, X$.
 
-####Result Extraction and Validation
+#### Result Extraction and Validation
 
 Recorded extracted parameter values and the final mean L1 loss.
 
