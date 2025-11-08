@@ -66,3 +66,5 @@ Minimized the L1 loss to extract optimal values for θ, M, X.
 Recorded extracted parameter values and the final mean L1 loss.
 
 Substituted results into the parametric equation for submission.
+
+### The Desmos graph link is as follows: https://www.desmos.com/calculator/6i2utcpcfb
